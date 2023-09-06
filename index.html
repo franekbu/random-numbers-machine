@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Maszyna losująca</title>
+
+        <meta name="author" content="Franciszek Bury">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <section class="adding__values">
+                <fieldset class="start__number--fieldset">
+                    <legend>podaj początek przedziału</legend>
+                    <input id="start__number" type="number">
+                    <span class="allert__start__number"></span>
+                </fieldset>
+                
+                <fieldset class="end__number--fieldset">
+                    <legend>Podaj koniec przedziału</legend>
+                    <input id="end__number" type="number">
+                    <span class="allert__end__number"></span>
+                </fieldset>
+                
+                <!-- ukryte -->
+                <fieldset class="start__next__number--fieldset hidden">
+                    <legend>podaj początek kolejnego przedziału</legend>
+                    <input id="start__next__number" type="number">
+                    <span class="allert__start__next__number"></span>
+                </fieldset>
+                
+                <!-- ukryte -->
+                <fieldset class="end__next__number--fieldset hidden">
+                    <legend>Podaj koniec kolejnego przedziału</legend>
+                    <input id="end__next__number" type="number">
+                    <span class="allert__end__next__number"></span>
+                </fieldset>
+    
+                <fieldset class="add__number__range--fieldset">
+                    <button class="add__number__range">Dodaj przedział</button>
+                    <label for="add__number__range" id="label__add__number__range">(Max 2)</label>
+                </fieldset>
+    
+                <fieldset class="unical__numbers__checkbox">
+                    <input id="unical__numbers" type="checkbox" name="unical__numbers">
+                    <label for="unical__numbers">Unikalne liczby</label>
+                </fieldset>
+    
+                <fieldset class="showing__in__sequence--fieldset">
+                    <input id="showing__in__sequence" type="checkbox" name="showing__in__sequence">
+                    <label for="showing__in__sequence">Pokazywać po koleji ?</label>
+                </fieldset>
+    
+                <fieldset class="unwanted__numbers--fieldset">
+                    <legend>Jakie liczby chcesz wykluczyć ?</legend>
+                    <input id="unwanted__numbers" name="unwanted__numbers" type="number">
+                    <span class="allert__same__number__again hidden">Ta liczba już była!!!</span>
+                    <button class="accept__unwanted__number">Zatwierdź</button>
+                    <input id="show__unwanted__numbers" type="text" name="show__unwanted__numbers">
+                    <button class="remove__unwanted__numbers">Usuń</button>
+                </fieldset>
+    
+                <fieldset class="how__many__numbers--fieldset">
+                    <legend>Ile liczb wygenerować ?</legend>
+                    <input id="how__many__numbers" type="number" name="how__many__numbers" value="1" min="1">
+                </fieldset>
+    
+                <button class="search__random__number">Szukaj liczby</button>
+            </section>
+            <section class="showing__values">
+                <fieldset class="generated__number--fieldset">
+                    <legend>Wygenerowane liczby</legend>
+                    <textarea id="generated__number" type="text" name="generated__number" readonly></textarea>
+                    <span class="which__number__showing hidden"></span>
+                    <button class="show__previous__number hidden">Pokaż poprzednią liczbę</button>
+                    <button class="show__next__number hidden">Pokaż następną liczbę</button>
+                </fieldset>
+            </section>
+        </main>
+
+
+        <script src="app.js"></script>
+    </body>
+</html>
